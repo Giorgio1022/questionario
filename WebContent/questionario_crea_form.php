@@ -69,11 +69,8 @@ if(!isset($_SESSION['utente'])){
                 <p>Materia:
 
                 <?php
-                    $conn = mysqli_connect("helios.itisgubbio.local", "tpsit", "tpsit", "questionario");
-
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
+                    
+                    require "lib/connessione.php";
                     $sql = "SELECT `Nome` FROM `materia`";
                     $result = mysqli_query($conn, $sql);
                     echo"<select name = 'materia' id = 'materia' style='width:100px'>";

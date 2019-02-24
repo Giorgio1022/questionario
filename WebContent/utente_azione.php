@@ -5,18 +5,10 @@ if(!isset($_SESSION['Livello'])){
 }
 else{
     if($_SESSION['Livello'] == 1){
-    $servername = "helios.itisgubbio.local";
-    $username="tpsit";
-    $psw="tpsit";
-    $db="questionario";
     $x = $_POST["Nome"];
     $y = md5($_POST["Password"]);
     $z = $_POST["Livello"];
-    $conn = mysqli_connect($servername,$username,$psw,$db);
-
-	if(!$conn){
-		die("Connessione fallita: " . mysqli_connect_error());
-	}
+    require "lib/connessione.php";
 	
 	$sql = "INSERT INTO utenti (Username, Password, Livello) VALUES ('$x','$y','$z')";
 		

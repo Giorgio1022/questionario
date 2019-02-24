@@ -49,17 +49,8 @@
 <p align=center> <span style="padding-left:1em"> Materia </span><span style="padding-left:5em"> Domanda </span></p>
 <!-- stabilisco la connessione con il server -->
 <p align=center> <?php
-$servername = "192.168.1.25";
-$username = "tpsit";
-$password = "tpsit";
-$db = "questionario";
-    
-$conn = mysqli_connect($servername, $username, $password, $db);
-    
-//verifico se la connessione è stata stabilita o meno
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require "lib/connessione.php";
+
 //comando sql per la selezione del nome all’interno della tabella materia
 $sql = "SELECT `Nome` FROM `materia`";
 $result = mysqli_query($conn, $sql);

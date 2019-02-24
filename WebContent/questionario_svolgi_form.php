@@ -24,18 +24,9 @@ session_start();
         //stabilisco la connessione con il server
         $ID=$_GET['id'];
         $_SESSION['ID'] = $ID;
-        $servername = "192.168.1.25";
-        $username = "tpsit";
-        $password = "tpsit";
-$db = "questionario";
+        
+require "lib/connessione.php";
 
-$conn = mysqli_connect($servername, $username, $password, $db);
-//verifico se la connessione è stata stabilita o meno
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-//consente i caratteri speciali
-mysqli_set_charset($conn,"utf8");
 
 //comando sql per la selezione dei dati all’interno della tabella questionario 
 //con l’id uguale a quello inserito

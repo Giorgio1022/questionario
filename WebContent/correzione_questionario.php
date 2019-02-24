@@ -7,10 +7,7 @@
     <body>
         <?php  
         $idSvolgimento = $_GET["id"];
-        $conn = mysqli_connect('helios.itisgubbio.local', 'tpsit', 'tpsit', 'questionario');
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        require "lib/connessione.php";
         
         $sql = 
             "SELECT SUM(risposte.Punteggio) as Punteggio, svolgimenti.FK_Utente

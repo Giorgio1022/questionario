@@ -1,16 +1,8 @@
 <?php
 //stabilisco la connessione con il server
 error_log("P1:".serialize($_POST));
-$servername = "192.168.1.25";
-$username = "tpsit";
-$password = "tpsit";
-$db = "questionario";
-$connessione = mysqli_connect($servername, $username, $password, $db);
-//verifico se la connessione è stata stabilita o meno
-if (!$connessione){
-    die("Connection failed: " . mysqli_connect_error());
-}
-mysqli_set_charset($conn,'utf8');
+require "lib/connessione.php";
+
 //comando sql per l’inserimento dei dati all’interno di domande
 $testoDomanda = mysqli_real_escape_string($connessione,$_POST['Domanda']);
 $sql = "INSERT INTO `domande`(`ID_domanda`, `Testo_domanda`, `FK_Materia`) VALUES ('NULL','$testoDomanda','{$_POST['listbox']}')";

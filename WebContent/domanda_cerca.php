@@ -10,12 +10,9 @@ if(!isset($_SESSION['utenti'])){
 }
 // creo la connessione con il server talos, se (if) la connessione non avviene con successo, 
 // viene visualizzato un messaggio di errore.
-$conn = mysqli_connect('helios.itisgubbio.local', 'tpsit', 'tpsit', 'questionario');
-mysqli_set_charset($conn,'utf8');
-if(!$conn){
-    die("Errore di connessione: " . mysqli_connect_error());
-}
-//selezione di tutto il contenuto dalla tabelle domande, ove la materia e successivamente la domanda, contengono uno o più caratteri da noi passati. Successivamente vengono ordinati in base all’ ID_Domanda. 
+require "lib/connessione.php";
+
+//selezione di tutto il contenuto dalla tabelle domande, ove la materia e successivamente la domanda, contengono uno o piï¿½ caratteri da noi passati. Successivamente vengono ordinati in base allï¿½ ID_Domanda. 
 $sqlDomande = "
 SELECT * 
 FROM materia INNER JOIN domande ON materia.Nome = domande.FK_Materia
@@ -26,7 +23,7 @@ ORDER BY ID_domanda
 $risultatoDomande = mysqli_query($conn, $sqlDomande);
 echo "[\n";
 while($domande = mysqli_fetch_assoc($risultatoDomande)){
-//selezione di tutto il contenuto appartenente alla tabella risposte, ove la domanda è identica al campo FK_DOMANDA.
+//selezione di tutto il contenuto appartenente alla tabella risposte, ove la domanda ï¿½ identica al campo FK_DOMANDA.
     $sqlRisposte = "
     SELECT * 
     FROM risposte
