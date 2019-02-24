@@ -10,13 +10,14 @@ if(!isset($_SESSION['utenti'])){
 }
 // creo la connessione con il server talos, se (if) la connessione non avviene con successo, 
 // viene visualizzato un messaggio di errore.
+
 require "lib/connessione.php";
 
 //selezione di tutto il contenuto dalla tabelle domande, ove la materia e successivamente la domanda, contengono uno o pi� caratteri da noi passati. Successivamente vengono ordinati in base all� ID_Domanda. 
 $sqlDomande = "
 SELECT * 
-FROM materia INNER JOIN domande ON materia.Nome = domande.FK_Materia
-WHERE materia.Nome LIKE '%$materia%' AND domande.Testo_domanda LIKE '%$desc%'
+FROM materie INNER JOIN domande ON materie.Nome = domande.FK_Materia
+WHERE materie.Nome LIKE '%$materia%' AND domande.Testo_domanda LIKE '%$desc%'
 ORDER BY ID_domanda
 ";
 

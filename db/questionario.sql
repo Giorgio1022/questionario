@@ -28,17 +28,17 @@ CREATE TABLE `domande` (
   `FK_Materia` char(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `domande_questionario` (
+CREATE TABLE `domande_questionari` (
   `ID` int(11) NOT NULL,
   `FK_domanda` int(4) DEFAULT NULL,
   `FK_questionario` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `materia` (
+CREATE TABLE `materie` (
   `Nome` char(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `questionario` (
+CREATE TABLE `questionari` (
   `ID` int(4) NOT NULL,
   `Nome` char(30) NOT NULL,
   `FK_Materia` char(30) NOT NULL

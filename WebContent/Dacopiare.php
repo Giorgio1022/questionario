@@ -52,7 +52,7 @@
 require "lib/connessione.php";
 
 //comando sql per la selezione del nome all’interno della tabella materia
-$sql = "SELECT `Nome` FROM `materia`";
+$sql = "SELECT `Nome` FROM `materie`";
 $result = mysqli_query($conn, $sql);
 //creo una listbox
  echo"<select name='listbox' style='width:100px'>";

@@ -75,7 +75,7 @@ tr:hover td {
 <?php
 require "lib/connessione.php";
 
-$query = "SELECT * FROM questionario";
+$query = "SELECT * FROM questionari";
 $ris = mysqli_query($connessione, $query);
 
 while ($row = mysqli_fetch_assoc($ris)) {
