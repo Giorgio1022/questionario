@@ -1,5 +1,6 @@
 :url-asciidoc: https://asciidoctor.org/docs/asciidoc-recommended-practices/
-:url-vsc: https://asciidoctor.org/docs/asciidoc-recommended-practices/
+:url-vsc: https://code.visualstudio.com/
+:url-inkscape: https://inkscape.org/
 
 = HOWTO
 Per info su come scrive i documenti asciidoc vedi {url-asciidoc}[AsciiDoc Recommended Practices]
@@ -7,4 +8,7 @@ Per info su come scrive i documenti asciidoc vedi {url-asciidoc}[AsciiDoc Recomm
 = sviluppo
 
 == ambiente
-Non ci sono particolari impostazioni ma ormalmente usiamo {url-vsc}[Visual Studio Code], per usare asciidoc va bene l'omnimo plugin: AsciiDoc
+Non ci sono particolari impostazioni ma normalmente usiamo {url-vsc}[Visual Studio Code], per usare asciidoc va bene l'omonimo plugin: AsciiDoc
+
+== diagramma
+doc/diagramma_pagine.svg è stato disegnato con {url-inkscape}[Inkscape]
