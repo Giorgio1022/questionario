@@ -1,0 +1,39 @@
+body{
+     background: linear-gradient(to right, red , yellow);
+    text-align: center;
+    
+}
+label{
+    margin-bottom: 1em;
+}
+#txtuser{
+    margin-bottom: 1em;
+}
+
+.butt{
+    padding: 16px 32px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-top: 1em;
+}
+.butt:hover {
+    background-color: #008CBA;
+    color: white;
+}
+h1{
+    margin-bottom: 1.20em
+}
+
+.but{
+    border-left: 25em;
+    padding: 12px 25px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-top: 1em;
+}
+.but:hover {
+    background-color: red;
+    color: white;
+}

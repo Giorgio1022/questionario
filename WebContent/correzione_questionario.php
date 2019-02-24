@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Correzione Questionario</title>
+        <meta charset = "UTF-8">
+    </head>
+    <body>
+        <?php  
+        $idSvolgimento = $_GET["id"];
+        $conn = mysqli_connect('helios.itisgubbio.local', 'tpsit', 'tpsit', 'questionario');
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        
+        $sql = 
+            "SELECT SUM(risposte.Punteggio) as Punteggio, svolgimenti.FK_Utente
+             FROM risposte_svolgimenti INNER JOIN risposte ON risposte.ID_risposta = risposte_svolgimenti.FK_Risposta
+	                                   INNER JOIN svolgimenti ON svolgimenti.ID = risposte_svolgimenti.FK_Svolgimento
+             WHERE svolgimenti.ID = '$idSvolgimento'";
+        
+        $risultato = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($risultato) > 0) {
+            while($punteggio = mysqli_fetch_assoc($risultato)) {   
+                echo  " Utente: " . $punteggio['FK_Utente'] . "<br> Punteggio: " . $punteggio['Punteggio'];
+            }
+        } else {
+            echo "0 results";
+        }
+        mysqli_close($conn);
+        ?>
+    </body>
+</html>

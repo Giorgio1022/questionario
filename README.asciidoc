@@ -1,0 +1,10 @@
+:url-asciidoc: https://asciidoctor.org/docs/asciidoc-recommended-practices/
+:url-vsc: https://asciidoctor.org/docs/asciidoc-recommended-practices/
+
+= HOWTO
+Per info su come scrive i documenti asciidoc vedi {url-asciidoc}[AsciiDoc Recommended Practices]
+
+= sviluppo
+
+== ambiente
+Non ci sono particolari impostazioni ma ormalmente usiamo {url-vsc}[Visual Studio Code], per usare asciidoc va bene l'omnimo plugin: AsciiDoc
