@@ -2,11 +2,9 @@
 session_start();
 if(!isset($_SESSION['utente'])){
     header('location: index.php');
-}
-else{
-    echo <<< END
-    
-    <!DOCTYPE html>
+    exit(0);
+} ?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Creazione del Questionario</title>
@@ -69,9 +67,6 @@ else{
             <div id = "divDomanda">
                 <h3>Ricerca Testo Domande e/o Materia</h3>
                 <p>Materia:
-END;
-}
-?>
 
                 <?php
                     $conn = mysqli_connect("helios.itisgubbio.local", "tpsit", "tpsit", "questionario");
@@ -91,12 +86,7 @@ END;
                     }
                     echo"</select>";
                 ?>
-<?php
-if(!isset($_SESSION['utente'])){
-    header('location: index.php');
-}
-else{
-    echo <<< END2
+
     </p>
                 <p>Domanda: <input type = "text" name = "q" id = "testoD"></p>    
                 <input type = "button" onclick = "cercaDomanda()" value = "cerca">
@@ -204,7 +194,4 @@ else{
         </script>
     </body>
 </html>
-END2;
-}
-?>
                 
