@@ -10,5 +10,8 @@ Per info su come scrive i documenti asciidoc vedi {url-asciidoc}[AsciiDoc Recomm
 == ambiente
 Non ci sono particolari impostazioni ma normalmente usiamo {url-vsc}[Visual Studio Code], per usare asciidoc va bene l'omonimo plugin: AsciiDoc
 
+Se si usa il client grafico di GitHub e bisogna passare per un proxy: dalla linea di comando `git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080`
+
+
 == diagramma
 doc/diagramma_pagine.svg è stato disegnato con {url-inkscape}[Inkscape]
