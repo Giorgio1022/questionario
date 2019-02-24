@@ -15,18 +15,10 @@ session_start();
 <?php
 $ID=$_SESSION['ID'];
 $utente = $_SESSION['utente'];
-$servername = "192.168.1.25";
-$username = "tpsit";
-$password = "tpsit";
-$db = "questionario";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
-// Check connection
-   if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-mysqli_set_charset($conn,"utf8");
-    $data = date('Y-m-d');
+require "lib/connessione.php";
+
+$data = date('Y-m-d');
 $sql="INSERT INTO `svolgimenti`(`ID`, `Data`, `FK_Utente`, `FK_questionario`) VALUES ('NULL','$data','$utente', '$ID')";   
     if (mysqli_query($conn, $sql)) {
    echo '<script language="javascript">';

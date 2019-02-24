@@ -1,9 +1,7 @@
 <?php
 session_start();
-$conn = mysqli_connect("helios.itisgubbio.local","tpsit","tpsit","questionario");
-if(!$conn){
-    die("Connessione non riuscita: " . mysqli_connect_error());
-}
+require "lib/connessione.php";
+
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 $sql="SELECT Username, Password, Livello FROM utenti WHERE username = '$username' AND Password = '$password';";

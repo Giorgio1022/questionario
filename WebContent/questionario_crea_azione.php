@@ -1,12 +1,8 @@
 <?php
 
-$conn = mysqli_connect('helios.itisgubbio.local', 'tpsit', 'tpsit', 'questionario');
+require "lib/connessione.php";
 $sqlQuestionario = "";
 $sqlDQ = "";
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 $sqlQuestionario = 
     "INSERT INTO questionari (ID, Nome, FK_Materia)

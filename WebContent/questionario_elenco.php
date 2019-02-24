@@ -73,10 +73,7 @@ tr:hover td {
             <th>Materia</th>
         </tr>
 <?php
-$connessione = mysqli_connect("helios.itisgubbio.local", "tpsit", "tpsit", "questionario");
-if (!$connessione) {
-    die(mysqli_connect_error());
-}
+require "lib/connessione.php";
 
 $query = "SELECT * FROM questionari";
 $ris = mysqli_query($connessione, $query);

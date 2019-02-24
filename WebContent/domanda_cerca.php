@@ -10,11 +10,9 @@ if(!isset($_SESSION['utenti'])){
 }
 // creo la connessione con il server talos, se (if) la connessione non avviene con successo, 
 // viene visualizzato un messaggio di errore.
-$conn = mysqli_connect('helios.itisgubbio.local', 'tpsit', 'tpsit', 'questionario');
-mysqli_set_charset($conn,'utf8');
-if(!$conn){
-    die("Errore di connessione: " . mysqli_connect_error());
-}
+
+require "lib/connessione.php";
+
 //selezione di tutto il contenuto dalla tabelle domande, ove la materia e successivamente la domanda, contengono uno o pi� caratteri da noi passati. Successivamente vengono ordinati in base all� ID_Domanda. 
 $sqlDomande = "
 SELECT * 

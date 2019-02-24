@@ -1,12 +1,11 @@
 <?php	
 	session_start();
-        if(!isset($_SESSION['utente'])){
-		header('location: login_form.html');     
-		}
-	else{
+    if(!isset($_SESSION['utente'])){
+        header('location: login_form.html');     
+        exit(0);
+	}
+?>
         
-echo <<< END
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,11 +42,9 @@ echo <<< END
             <div><h1 style="font-size: 4.5em"> <p style="color:red" align=center> Questionario</p></h1></div>
             <div style='text-align: right;'><a  href='logout.php'><img id="esci" src="logout.png"/></a></div>
         </header>
-        
-END;
-        //Errore in questa riga
-        if($_SESSION['Livello']==1){
-echo <<< END1
+    
+<?php  if($_SESSION['Livello']==1){ //Errore in questa riga ?>
+
         <table border="0" align="center"> 
             <tr>
                 <th>Crea Questionario</th>
@@ -61,13 +58,10 @@ echo <<< END1
                 <td> <a href="questionario_elenco.php"> <img src="elenco.png" style="width:100px;height:100px;"> </a></td>
                 <td> <a href="domanda_inserisci_form.php"> <img src="domande.jpg" style="width:145px;height:110px;"> </a></td>
                 <td> <a href="materia_inserisci_form.php"> <img src="materia.jpg" style="width:110px;height:100px;"> </a></td>
-				<td> <a href="utente_form.php"> <img src="utente.jpg" style="width:110px;height:100px;"> </a></td>
+                <td> <a href="utente_form.php"> <img src="utente.png" style="width:110px;height:100px;"> </a></td>
             </tr>          
         </table>
-END1;
-}
-        else
-        {?>
+<?php } else {?>
 
         <table border="0" align="center"> 
             <tr>
@@ -77,11 +71,7 @@ END1;
                 <td><img onclick="esegui();" src="questionario.jpg" style="width:100px;height:100px;"></td>
             </tr>          
         </table>
-
-<?php            
-        }
+          
+<?php } ?>
    echo "</body>";
 echo"</html>";
-
-		}
-?>

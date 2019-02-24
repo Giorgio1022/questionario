@@ -1,11 +1,9 @@
 <?php
 session_start();
 if(!isset($_SESSION['Livello'])){
-    header('index.php');
-}
-else{
-    if($_SESSION['Livello'] == 1){
-        echo <<< END
+    header('location: index.php');
+    exit(0);
+}?>
         <!DOCTYPE html>
 <html>
 <style>
@@ -31,10 +29,3 @@ html{
     </form>
 </body>
 </html>
-END;
-    }
-    else{
-        header('location: index.php');
-    }
-}
-?>
