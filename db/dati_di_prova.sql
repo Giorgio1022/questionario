@@ -31,7 +31,7 @@ INSERT INTO `utenti` (`Username`, `Password`, `Livello`) VALUES
 ('silvia', MD5('password'), '0'),
 ('studente', MD5('password'), '0');
 
-INSERT INTO `materia` (`Nome`) VALUES
+INSERT INTO `materie` (`Nome`) VALUES
 ('inglese'),
 ('sistemi'),
 ('tpsit'),
@@ -223,7 +223,7 @@ INSERT INTO `risposte` (`ID_risposta`, `Testo_risposta`, `Punteggio`, `FK_domand
 (155, 'Crea un server', '0.0', 39),
 (156, 'Protezione degli IP', '0.0', 39);
 
-INSERT INTO `questionario` (`ID`, `Nome`, `FK_Materia`) VALUES
+INSERT INTO `questionari` (`ID`, `Nome`, `FK_Materia`) VALUES
 (1, 'sistemi', 'sistemi'),
 (2, 'sistemi2', 'sistemi'),
 (4, 'Domande storia', 'storia'),
@@ -239,7 +239,7 @@ INSERT INTO `questionario` (`ID`, `Nome`, `FK_Materia`) VALUES
 (15, 'prova di informatica', 'informatica'),
 (16, 'bhoo', 'italiano');
 
-INSERT INTO `domande_questionario` (`ID`, `FK_domanda`, `FK_questionario`) VALUES
+INSERT INTO `domande_questionari` (`ID`, `FK_domanda`, `FK_questionario`) VALUES
  (1, 2, 1),
  (2, 15, 1),
  (3, 8, 2),

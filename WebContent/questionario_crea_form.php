@@ -79,7 +79,7 @@ END;
                     if (!$conn) {
                         die("Connection failed: " . mysqli_connect_error());
                     }
-                    $sql = "SELECT `Nome` FROM `materia`";
+                    $sql = "SELECT `Nome` FROM `materie`";
                     $result = mysqli_query($conn, $sql);
                     echo"<select name = 'materia' id = 'materia' style='width:100px'>";
                     if (mysqli_num_rows($result) > 0) {

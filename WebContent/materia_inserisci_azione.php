@@ -10,7 +10,7 @@ if (!$connessione){
     die("Connection failed: " . mysqli_connect_error());
 }
 //comando sql per l’inserimento dei dati all’interno della tabella materia
-$sql = "INSERT INTO `materia`(`Nome`) VALUES ('{$_POST['materia']}')";
+$sql = "INSERT INTO `materie`(`Nome`) VALUES ('{$_POST['materia']}')";
 
 //stampo su video il risultato dell’operazione
 if(mysqli_query($connessione, $sql)){

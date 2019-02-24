@@ -39,7 +39,7 @@ mysqli_set_charset($conn,"utf8");
 
 //comando sql per la selezione dei dati all’interno della tabella questionario 
 //con l’id uguale a quello inserito
-$sql="SELECT * FROM questionario WHERE ID = $ID";
+$sql="SELECT * FROM questionari WHERE ID = $ID";
   
 $result = mysqli_query($conn, $sql);
  //stampo il nome de questionario se c’è un risultato se no stampo un alert 
@@ -57,9 +57,9 @@ if ($result && mysqli_num_rows($result) > 0) {
    }
     
 //comando sql per la selezione delle domande che abbiano i seguesnti requisiti 
-$sqlDomande="SELECT domande.* FROM domande,domande_questionario,questionario 
-WHERE domande.ID_domanda=domande_questionario.FK_domanda and domande_questionario.FK_questionario=questionario.ID 
-and questionario.id='$ID'";
+$sqlDomande="SELECT domande.* FROM domande,domande_questionari,questionari 
+WHERE domande.ID_domanda=domande_questionari.FK_domanda and domande_questionari.FK_questionario=questionari.ID 
+and questionari.id='$ID'";
 
 $resultDomande = mysqli_query($conn, $sqlDomande);
 //stampo il testo della domanda se sono state trovate righe e procedo con la stampa delle risposte

@@ -9,7 +9,7 @@ if (!$conn) {
 }
 
 $sqlQuestionario = 
-    "INSERT INTO questionario (ID, Nome, FK_Materia)
+    "INSERT INTO questionari (ID, Nome, FK_Materia)
      VALUES ('', '$_POST[nomequestionario]', '$_POST[materiaQuestionario]')";
 
 if(mysqli_query($conn, $sqlQuestionario)){
@@ -20,7 +20,7 @@ else{
 }
 
 
-$sqlDQ = "INSERT INTO domande_questionario (ID, FK_domanda, FK_questionario)
+$sqlDQ = "INSERT INTO domande_questionari (ID, FK_domanda, FK_questionario)
             VALUES";
 
 foreach($_POST as $key => $value){
