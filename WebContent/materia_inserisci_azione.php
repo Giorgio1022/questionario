@@ -6,7 +6,7 @@ require "lib/connessione.php";
 $sql = "INSERT INTO `materie`(`Nome`) VALUES ('{$_POST['materia']}')";
 
 //stampo su video il risultato dell’operazione
-if(mysqli_query($connessione, $sql)){
+if(mysqli_query($conn, $sql)){
      echo '<script language="javascript">';
         echo 'alert("I dati sono stati inseriti");';
         echo 'window.location.href = "/nicola/Questionario/materia_inserisci_form.php";';
@@ -19,6 +19,6 @@ if(mysqli_query($connessione, $sql)){
 }
 
 //chiudo la connessione
-mysqli_close($connessione);
+mysqli_close($conn);
 ?>
 

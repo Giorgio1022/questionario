@@ -76,7 +76,7 @@ tr:hover td {
 require "lib/connessione.php";
 
 $query = "SELECT * FROM questionari";
-$ris = mysqli_query($connessione, $query);
+$ris = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($ris)) {
     echo "<tr>";
@@ -85,7 +85,7 @@ while ($row = mysqli_fetch_assoc($ris)) {
     echo "<td>" . $row["FK_Materia"] . "</td>";
     echo "</tr>";
 }
-mysqli_close($connessione);
+mysqli_close($conn);
 
 
 ?>
