@@ -16,7 +16,7 @@ session_start();
     if(!isset($_GET['id'])){
         echo '<script language="javascript">';
         echo 'alert("Id non è stato inserito");';
-        echo 'window.location.href = "/nicola/Questionario/index.php";';
+        echo 'window.location.href = "index.php";';
         echo '</script>';
     }
         else {
@@ -43,7 +43,7 @@ if ($result && mysqli_num_rows($result) > 0) {
  else {
         echo '<script language="javascript">';
         echo 'alert("Id non è stato inserito");';
-        echo 'window.location.href = "/nicola/Questionario/index.php";';
+        echo 'window.location.href = "index.php";';
         echo '</script>';
    }
     

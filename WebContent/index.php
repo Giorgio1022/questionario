@@ -32,7 +32,7 @@
     <script type="text/javascript">
     function esegui(){
     var ID = document.getElementById('ID').value;
-    window.location.href = '/nicola/Questionario/questionario_svolgi_form.php?id=' + ID;
+    window.location.href = 'questionario_svolgi_form.php?id=' + ID;
     }
     </script>
 </head>
@@ -73,5 +73,5 @@
         </table>
           
 <?php } ?>
-   echo "</body>";
-echo"</html>";
+</body>
+</html>

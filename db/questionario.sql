@@ -74,15 +74,15 @@ ALTER TABLE `domande`
   ADD PRIMARY KEY (`ID_domanda`),
   ADD KEY `FK_Materia` (`FK_Materia`) USING BTREE;
 
-ALTER TABLE `domande_questionario`
+ALTER TABLE `domande_questionari`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `FK_domanda` (`FK_domanda`),
   ADD KEY `FK_questionario` (`FK_questionario`);
 
-ALTER TABLE `materia`
+ALTER TABLE `materie`
   ADD PRIMARY KEY (`Nome`);
 
-ALTER TABLE `questionario`
+ALTER TABLE `questionari`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `FK_Materia` (`FK_Materia`);
 
@@ -107,10 +107,10 @@ ALTER TABLE `utenti`
 ALTER TABLE `domande`
   MODIFY `ID_domanda` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
-ALTER TABLE `domande_questionario`
+ALTER TABLE `domande_questionari`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
-ALTER TABLE `questionario`
+ALTER TABLE `questionari`
   MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 ALTER TABLE `risposte`
@@ -124,15 +124,15 @@ ALTER TABLE `svolgimenti`
 
 
 ALTER TABLE `domande`
-  ADD CONSTRAINT `domande_ibfk_1` FOREIGN KEY (`FK_materia`) REFERENCES `materia` (`Nome`),
-  ADD CONSTRAINT `domande_ibfk_2` FOREIGN KEY (`FK_Materia`) REFERENCES `materia` (`Nome`);
+  ADD CONSTRAINT `domande_ibfk_1` FOREIGN KEY (`FK_materia`) REFERENCES `materie` (`Nome`),
+  ADD CONSTRAINT `domande_ibfk_2` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`);
 
-ALTER TABLE `domande_questionario`
+ALTER TABLE `domande_questionari`
   ADD CONSTRAINT `domande_questionario_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`),
-  ADD CONSTRAINT `domande_questionario_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionario` (`ID`);
+  ADD CONSTRAINT `domande_questionario_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionari` (`ID`);
 
-ALTER TABLE `questionario`
-  ADD CONSTRAINT `questionario_ibfk_1` FOREIGN KEY (`FK_Materia`) REFERENCES `materia` (`Nome`);
+ALTER TABLE `questionari`
+  ADD CONSTRAINT `questionario_ibfk_1` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`);
 
 ALTER TABLE `risposte`
   ADD CONSTRAINT `risposte_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`);
@@ -143,7 +143,7 @@ ALTER TABLE `risposte_svolgimenti`
 
 ALTER TABLE `svolgimenti`
   ADD CONSTRAINT `svolgimenti_ibfk_1` FOREIGN KEY (`FK_Utente`) REFERENCES `utenti` (`Username`),
-  ADD CONSTRAINT `svolgimenti_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionario` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `svolgimenti_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionari` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

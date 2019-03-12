@@ -49,7 +49,7 @@ INSERT INTO `domande` (`ID_domanda`, `Testo_domanda`, `FK_Materia`) VALUES
 (8, 'Quale è l\'algoritmo di crittografia simmetrico piu sicuro?', 'sistemi'),
 (9, 'Che cosa è l\'ONU?', 'storia'),
 (11, 'Chi ha dato vita al verismo italiano?', 'italiano'),
-(12, 'XMLHttpRequest: il metodo responseText', 'tpsit'),
+(12, 'XMLHttpReque1st: il metodo responseText', 'tpsit'),
 (13, 'Nel linguaggio SQL, per implementare un ordinamento decrescente è necessario utilizzare la sintassi:', 'informatica'),
 (14, 'In che secolo è vissuto Montale?', 'italiano'),
 (15, 'Cosa permette di fare la DMZ?', 'sistemi'),
@@ -69,7 +69,7 @@ INSERT INTO `domande` (`ID_domanda`, `Testo_domanda`, `FK_Materia`) VALUES
 (29, 'In che anno entrò in vigore la costituzione Italiana?', 'storia'),
 (30, 'Nel linguaggio SQL, le tre parole chiave \"UPDATE\", \" SET\" e \"WHERE\":', 'informatica'),
 (31, 'Nel linguaggio SQL, esiste una differenza tra la clausola \"WHERE\" e la clausola \"HAVING\"?', 'informatica'),
-(32, 'Quale fù la nazione che liberò gli ebrei?', 'storia'),
+(32, 'Quale fù la nazione?', 'storia'),
 (33, 'Quale tra i seguenti dispositivi di memoria può avere la capacità  più alta?', 'informatica'),
 (34, 'Quale tra i seguenti non è un operatore logico di Access?', 'informatica'),
 (35, 'Cosa si intende per chiave esterna?', 'informatica'),
@@ -449,3 +449,5 @@ INSERT INTO `risposte_svolgimenti` (`ID`, `FK_Risposta`, `FK_Svolgimento`) VALUE
 (182, 57, 69),
 (183, 6, 70),
 (184, 58, 70);
+
+COMMIT;

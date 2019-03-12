@@ -7,7 +7,7 @@ session_start();
 </head>
 <script>
     function redirect(){
-        window.location.href="/nicola/Questionario/index.php";
+        window.location.href="index.php";
     }
 </script>
 <title> Questionario </title>  
@@ -40,12 +40,12 @@ $sqlr = substr($sqlr, 0, -1);
 if (mysqli_query($conn, $sqlr)) {
     echo '<script language="javascript">';
         echo 'alert("Le risposte sono state inserite");';
-    // echo 'window.location.href = "/nicola/Questionario/index.php";';
+    // echo 'window.location.href = "index.php";';
         echo '</script>';
 } else {
    echo '<script language="javascript">';
         echo 'alert("Le risposte non sono state inserite");';
-   // echo 'window.location.href = "/nicola/Questionario/index.php";';
+   // echo 'window.location.href = "index.php";';
         echo '</script>';
 }
     

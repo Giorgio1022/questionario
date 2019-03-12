@@ -35,12 +35,12 @@ error_log("P3 ".$sqlr);
 if(mysqli_query($conn, $sqlr)){
      echo '<script language="javascript">';
         echo 'alert("Le risposte sono state inserite");';
-    echo 'window.location.href = "/nicola/Questionario/domanda_inserisci_form.php";';
+    echo 'window.location.href = "domanda_inserisci_form.php";';
         echo '</script>';
     } else {
      echo '<script language="javascript">';
         echo 'alert("Le risposte non sono state inserite" + mysqli_error($conn));';
-        echo 'window.location.href = "/nicola/Questionario/domanda_inserisci_form.php";';
+        echo 'window.location.href = "domanda_inserisci_form.php";';
         echo '</script>';
 }
 //chiudo la connessione
