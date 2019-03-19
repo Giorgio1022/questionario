@@ -122,27 +122,26 @@ ALTER TABLE `risposte_svolgimenti`
 ALTER TABLE `svolgimenti`
   MODIFY `ID` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
-
 ALTER TABLE `domande`
-  ADD CONSTRAINT `domande_ibfk_1` FOREIGN KEY (`FK_materia`) REFERENCES `materie` (`Nome`),
-  ADD CONSTRAINT `domande_ibfk_2` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`);
+  ADD CONSTRAINT `domande_ibfk_1` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `domande_ibfk_2` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `domande_questionari`
-  ADD CONSTRAINT `domande_questionario_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`),
-  ADD CONSTRAINT `domande_questionario_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionari` (`ID`);
+  ADD CONSTRAINT `domande_questionario_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `domande_questionario_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionari` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `questionari`
-  ADD CONSTRAINT `questionario_ibfk_1` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`);
+  ADD CONSTRAINT `questionario_ibfk_1` FOREIGN KEY (`FK_Materia`) REFERENCES `materie` (`Nome`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `risposte`
-  ADD CONSTRAINT `risposte_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`);
+  ADD CONSTRAINT `risposte_ibfk_1` FOREIGN KEY (`FK_domanda`) REFERENCES `domande` (`ID_domanda`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `risposte_svolgimenti`
-  ADD CONSTRAINT `risposte_svolgimenti_ibfk_1` FOREIGN KEY (`FK_Risposta`) REFERENCES `risposte` (`ID_risposta`),
-  ADD CONSTRAINT `risposte_svolgimenti_ibfk_2` FOREIGN KEY (`FK_Svolgimento`) REFERENCES `svolgimenti` (`ID`);
+  ADD CONSTRAINT `risposte_svolgimenti_ibfk_1` FOREIGN KEY (`FK_Risposta`) REFERENCES `risposte` (`ID_risposta`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `risposte_svolgimenti_ibfk_2` FOREIGN KEY (`FK_Svolgimento`) REFERENCES `svolgimenti` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `svolgimenti`
-  ADD CONSTRAINT `svolgimenti_ibfk_1` FOREIGN KEY (`FK_Utente`) REFERENCES `utenti` (`Username`),
+  ADD CONSTRAINT `svolgimenti_ibfk_1` FOREIGN KEY (`FK_Utente`) REFERENCES `utenti` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `svolgimenti_ibfk_2` FOREIGN KEY (`FK_questionario`) REFERENCES `questionari` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
