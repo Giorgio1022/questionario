@@ -3,7 +3,20 @@
 require "lib/connessione.php";
 $sqlQuestionario = "";
 $sqlDQ = "";
-
+$trovato=false;
+foreach($_POST as $key => $value){
+    if(strstr($key, "idD_")){
+        $trovato=true;
+        break;
+    }
+}
+if (!$trovato){
+    echo '<script language="javascript">';
+    echo 'alert("I dati non sono stati inseriti! È necessario selezionare la disciplina e le domande relative");';
+    echo 'window.location.href = "questionario_crea_form.php";';
+    echo '</script>';
+    exit(0);
+}
 $sqlQuestionario = 
     "INSERT INTO questionari (ID, Nome, FK_Materia)
      VALUES ('', '$_POST[nomequestionario]', '$_POST[materiaQuestionario]')";
