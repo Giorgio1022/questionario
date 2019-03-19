@@ -45,7 +45,7 @@
 }
 </style>
 </head>
-<title> Utenti </title>  
+<title> Inserimento materia </title>  
 <body> 
     
    <div style='text-align: left;'><a href='index.php'><img src="logout.png"/></a></div>
