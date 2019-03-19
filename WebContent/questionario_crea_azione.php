@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>redirect inserimento</title>
+</head>
+<body>
+<script>
 <?php
 
 require "lib/connessione.php";
@@ -40,14 +47,13 @@ foreach($_POST as $key => $value){
 $sqlDQ = substr($sqlDQ, 0, -1);
 
 if(mysqli_query($conn, $sqlDQ)){
-    echo '<script language="javascript">';
     echo 'alert("I dati sono stati inseriti");';
     echo 'window.location.href = "questionario_crea_form.php";';
-    echo '</script>';
 } else {
-    echo '<script language="javascript">';
     echo 'alert("I dati non sono stati inseriti" + mysqli_error($conn));';
     echo 'window.location.href = "questionario_crea_form.php";';
-    echo '</script>';
 }
 ?>
+</script>
+</body>
+</html>
