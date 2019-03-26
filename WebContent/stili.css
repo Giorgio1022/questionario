@@ -67,3 +67,18 @@ button:hover span:after {
   opacity: 1;
 }
 
+/* il quesitonario */
+div.domanda { 
+  background: #eeeeee ;
+  padding: 0;
+  text-align: left;
+}
+div.domanda > * {
+  padding:0.25em; 
+}
+div.domanda > h2 { 
+  background: #cccccc;
+}
+
+/* https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
+input[type="radio"]:checked+label{ font-style: italic } 
