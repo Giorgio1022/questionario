@@ -77,7 +77,7 @@ if (mysqli_num_rows($resultDomande) > 0) {
     //chiudo la connessiione
 mysqli_close($conn);
 //creo un bottone per inviare i dati alla pagina successiva che si limiterà a verificare i risultati 
-     echo '<p><button class="button"><span> Inivia questionario </span></button></p>';
+     echo '<p><button><span> Inivia questionario </span></button></p>';
         }
     ?> 
 </form>

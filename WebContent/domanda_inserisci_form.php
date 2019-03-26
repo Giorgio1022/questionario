@@ -61,7 +61,7 @@ mysqli_close($conn);
     </tr>
 </table>
     <!-- inserico un bottone che permetta di inviare i dati ad una pagina per l’inserimento -->
-<p align=center><button class="button"><span> Inserisci i dati </span></button></p> 
+<p><button><span> Inserisci i dati </span></button></p> 
 </form>
 </body>
 </html>
