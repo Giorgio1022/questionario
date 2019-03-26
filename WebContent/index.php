@@ -6,10 +6,10 @@
 	}
 ?>        
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title> Index </title>
-    <meta char-set="UTF-8">
+    <title>Index</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="stili.css">
     <script type="text/javascript">
     function esegui(){
@@ -22,9 +22,9 @@
 </head>
     <body>
          <header>
-            <div><img id="iis" src="logoiis.png"></div>
+            <div><img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone"></div>
             <h1>Questionario</h1>
-            <div><a  href='logout.php'><img id="esci" src="logout.png"/></a></div>
+            <div><a  href='logout.php'><img id="esci" src="immagini/logout.png"/></a></div>
         </header>
     
 <?php  if($_SESSION['livello']==1){ 
@@ -39,11 +39,11 @@
 				<th>Aggiungi Utente</th>
             </tr>
             <tr>
-                <td> <a href="questionario_crea_form.php"> <img src="questionario.jpg" style="width:100px;height:100px;"> </a></td>
-                <td> <a href="questionario_elenco.php"> <img src="elenco.png" style="width:100px;height:100px;"> </a></td>
-                <td> <a href="domanda_inserisci_form.php"> <img src="domande.jpg" style="width:145px;height:110px;"> </a></td>
-                <td> <a href="materia_inserisci_form.php"> <img src="materia.jpg" style="width:110px;height:100px;"> </a></td>
-                <td> <a href="utente_form.php"> <img src="utente.png" style="width:110px;height:100px;"> </a></td>
+                <td> <a href="questionario_crea_form.php"> <img src="immagini/questionario.jpg" style="height:100px;"> </a></td>
+                <td> <a href="questionario_elenco.php"> <img src="immagini/elenco.png" style="height:100px;"> </a></td>
+                <td> <a href="domanda_inserisci_form.php"> <img src="immagini/domande.png" style="height:110px;"> </a></td>
+                <td> <a href="materia_inserisci_form.php"> <img src="immagini/materia.jpg" style="height:100px;"> </a></td>
+                <td> <a href="utente_form.php"> <img src="immagini/utente.png" style="height:100px;"> </a></td>
             </tr>          
         </table>
 <?php } else { 

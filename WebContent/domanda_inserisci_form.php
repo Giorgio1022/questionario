@@ -1,17 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <!-- css della pagina con colori e relative animazioni -->
-<meta name="utente" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="stili.css">
+    <meta charset="UTF-8">
+    <title>Inserimento domande</title>
+    <meta name="utente" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stili.css">
 </head>
 <title> Utenti </title>  
 <body> 
      <!-- apro un form con metodo post che possa permettere di passare i dati tra pagine inserisco dei paragrafi -->
- <header>
-     <div><img id="iis" src="logoiis.png"></div>
-     <h1>Inserimento Domande</h1>
-     <a  href='index.php' ><img id="esci" src="logout.png"/></a>
-</header>
+     <header>
+            <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+            <h1>Inserimento domande</h1>
+            <a href="index.php"><img src="immagini/home.png"/></a>
+        </header>
 <form action="domanda_inserisci_azione.php" method="post">
 <p align=center> <span style="padding-left:1em"> Materia </span><span style="padding-left:5em"> Domanda </span></p>
 <!-- stabilisco la connessione con il server -->

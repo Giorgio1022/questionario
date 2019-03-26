@@ -1,14 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-<meta name="utente" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="stili.css">
+  <meta charset="UTF-8">
+  <title> Inserimento materia </title>  
+  <meta name="utente" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stili.css">
 </head>
-<title> Inserimento materia </title>  
 <body> 
   <header>
-    <div><img id="iis" src="logoiis.png"></div>
-    <h1>Inserisci materia</h1>
-    <div><a  href='index.php'><img id="esci" src="logout.png"/></a></div>
+      <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+      <h1>Inserimento materia</h1>
+      <a href="index.php"><img src="immagini/home.png"/></a>
   </header>
    
   <form action="materia_inserisci_azione.php" method="post">

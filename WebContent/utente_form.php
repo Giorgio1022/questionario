@@ -5,7 +5,7 @@ if(!isset($_SESSION['livello'])){
     exit(0);
 }?>
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <title>Inserisci Utente</title>
     <meta charset="UTF-8">
@@ -13,10 +13,10 @@ if(!isset($_SESSION['livello'])){
 </head>
 <body>
     <header>
-    <div><img id="iis" src="logoiis.png"></div>
-    <h1>Inserisci utente</h1>
-    <div><a  href='index.php'><img id="esci" src="logout.png"/></a></div>
-  </header>
+        <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+        <h1>Inserisci utente</h1>
+        <a href="index.php"><img src="immagini/home.png"/></a>
+    </header>
 
     <form action="utente_azione.php" method="post">
         <table style="margin:auto">

@@ -5,7 +5,7 @@ if(!isset($_SESSION['utente'])){
     exit(0);
 } ?>
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
         <title>Creazione del Questionario</title>
         <meta charset = "UTF-8">
@@ -35,9 +35,9 @@ if(!isset($_SESSION['utente'])){
     </head>
     <body>
         <header>
-            <div><img id="iis" src="logoiis.png"></div>
-            <div id="testoHeader">Creazione Questionario</div>
-            <a  href='index.php' ><img id="esci" src="logout.png"/></a>
+            <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+            <h1>Creazione Questionario</h1>
+            <a href="index.php"><img src="immagini/home.png"/></a>
         </header>
         <div id = "finestra">     
             <div id = "divDomanda">

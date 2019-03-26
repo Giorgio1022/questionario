@@ -7,6 +7,9 @@ session_start();
     <meta charset="UTF-8">
     <title>Questionario</title>  
     <link rel="stylesheet" type="text/css" href="stili.css">
+    <style>
+        form { margin: 2em }
+    </style>
 </head>
 <body> 
 <form action="questionario_svolgi_azione.php" method="post">
