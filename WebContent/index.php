@@ -4,8 +4,7 @@
         header('location: login_form.html');     
         exit(0);
 	}
-?>
-        
+?>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +13,10 @@
     <link rel="stylesheet" href="stili.css">
     <script type="text/javascript">
     function esegui(){
-    var ID = document.getElementById('ID').value;
-    window.location.href = 'questionario_svolgi_form.php?id=' + ID;
+        // devo leggere l'id del questionario da svolgere
+        var ID = document.getElementById('ID').value;
+        // carico la pagina del questionario
+        window.location.href = 'questionario_svolgi_form.php?id=' + ID;
     }
     </script>
 </head>
@@ -26,8 +27,9 @@
             <div><a  href='logout.php'><img id="esci" src="logout.png"/></a></div>
         </header>
     
-<?php  if($_SESSION['Livello']==1){ //Errore in questa riga ?>
-
+<?php  if($_SESSION['livello']==1){ 
+    // ingresso come docente 
+?>
         <table border="0" align="center"> 
             <tr>
                 <th>Crea Questionario</th>
@@ -44,8 +46,9 @@
                 <td> <a href="utente_form.php"> <img src="utente.png" style="width:110px;height:100px;"> </a></td>
             </tr>          
         </table>
-<?php } else {?>
-
+<?php } else { 
+    // ingresso come studente    
+?>
         <table border="0" align="center"> 
             <tr>
                 <th>Svolgi Questionario<br><input type="text" width="1em" id="ID" placeholder="Inserisci l'ID del questionario"></th>

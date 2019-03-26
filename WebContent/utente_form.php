@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['Livello'])){
+if(!isset($_SESSION['livello'])){
     header('location: index.php');
     exit(0);
 }?>
@@ -19,12 +19,23 @@ if(!isset($_SESSION['Livello'])){
   </header>
 
     <form action="utente_azione.php" method="post">
-        <p align=center><span style="padding-left:2em"> Nome </span> <span style="padding-left:8em"> Password </span><span style="padding-left: 2em;">Livello</span> </p>
-        <p align=center><input name="Nome" type="text"> <input name="Password" type="password"><select name='Livello'><option value="0">Studente</option><option value="1">Docente</option></select> </p>
-        
-        <br>
-        <p align=center><input value="Aggiungi" type="submit"></p>
-        <br>
+        <table style="margin:auto">
+            <tr>
+                <th>Nome</th><th>Password</th><th>Livello</th>
+            </tr>
+            <tr>
+                <td><input name="Nome" type="text"></td>
+                <td><input name="Password" type="password"></td>
+                <td>
+                    <select name='Livello'>
+                        <option value="0">Studente</option>
+                        <option value="1">Docente</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <p><input value="Aggiungi" type="submit"></p>
         
     </form>
 </body>

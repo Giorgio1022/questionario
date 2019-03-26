@@ -9,10 +9,11 @@ $risultato = mysqli_query($conn, $sql);
 if(mysqli_num_rows($risultato)>0){
     $riga = mysqli_fetch_assoc($risultato);
     $_SESSION['utente'] = $riga['Username'];
-    $_SESSION['Livello'] = $riga['Livello'];
-    header('location: index.php');            
-}
-else{
+    $_SESSION['livello'] = $riga['Livello'];
+    header('location: index.php');
+}else{
     header('location: login_form.html');
 }
+//chiudo la connessione
+mysqli_close($conn);
 ?>
