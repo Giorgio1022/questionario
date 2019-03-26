@@ -4,16 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="stili.css">
     <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-	font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom right, #26438c, #7D05FF);
-    height: 100%;
-    padding: 10px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 table {
@@ -29,23 +25,19 @@ th:first-child {
 
 th:last-child {
 	border-top-right-radius: 6px;
-	border-right: none;
 }
 
-th,
-td {
+th, td {
+    border: 0;
 	text-align: center;
 	padding: 10px;
 }
 
-
 tr:nth-child(even) {
-	background-color: #f2f2f2;
-    
+	background-color: #f2f2f2;    
 }
 tr:nth-child(odd) {
 	background-color: white;
-    
 }
 th {
 	background-color: #162650;

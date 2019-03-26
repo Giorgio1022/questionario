@@ -1,10 +1,8 @@
 <html>
 <head>
 <meta name="utente" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stili.css">
 <style>
-    html{
-   background: linear-gradient(to bottom right, black, #4000ff,#c4e6d9);
-}
 .button {
   border-radius: 4px;
   background-color: deepskyblue;
@@ -47,10 +45,13 @@
 </head>
 <title> Inserimento materia </title>  
 <body> 
-    
-   <div style='text-align: left;'><a href='index.php'><img src="logout.png"/></a></div>
+  <header>
+    <div><img id="iis" src="logoiis.png"></div>
+    <h1>Inserisci materia</h1>
+    <div><a  href='index.php'><img id="esci" src="logout.png"/></a></div>
+  </header>
+   
 <form action="materia_inserisci_azione.php" method="post">
-<h1 align=center style="color: chocolate">Inserisci Materia</h1>
      <p align=center> <input name="materia" type="text"></p>
 <p align=center><button class="button"><span> Inserisci i dati </span></button></p> 
 </form>

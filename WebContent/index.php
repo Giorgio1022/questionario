@@ -11,24 +11,7 @@
 <head>
     <title> Index </title>
     <meta char-set="UTF-8">
-    <style>
-           body{
-               text-align: center;
-            }
-            th{
-                 border: 0.1em solid green; 
-                 padding: 15px 70px;
-                 font-size: 1.325em;
-                 color: darkblue;
-            }
-            body {
-                background-color: azure;
-            }
-            #benvenuto{
-                text-align:right;
-                font-size: 1.5em;
-            }
-    </style>
+    <link rel="stylesheet" href="stili.css">
     <script type="text/javascript">
     function esegui(){
     var ID = document.getElementById('ID').value;
@@ -37,10 +20,10 @@
     </script>
 </head>
     <body>
-         <header style='display: grid;grid-template-columns: 1fr 1fr 1fr'>
-            <div style="text-align: left; height: 5em;"><img id="iis" src="logoiis.png"></div>
-            <div><h1 style="font-size: 4.5em"> <p style="color:red" align=center> Questionario</p></h1></div>
-            <div style='text-align: right;'><a  href='logout.php'><img id="esci" src="logout.png"/></a></div>
+         <header>
+            <div><img id="iis" src="logoiis.png"></div>
+            <h1>Questionario</h1>
+            <div><a  href='logout.php'><img id="esci" src="logout.png"/></a></div>
         </header>
     
 <?php  if($_SESSION['Livello']==1){ //Errore in questa riga ?>

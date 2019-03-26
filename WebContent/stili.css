@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: azure;
+}
+header{
+    display: grid;grid-template-columns: 1fr 4fr 1fr
+}
+header img{
+    height: 5em;
+}
+header > :first-child{
+    text-align: left;
+}
+header > :nth-child(2){
+    text-align: center;
+    font-size: 2.5em;
+}
+header > :last-child{
+    text-align: right;
+}
+
+
+ th{
+      border: 0.1em solid green; 
+      padding: 0.5em 1em;
+      font-size: 1.325em;
+      color: darkblue;
+ }
+ #benvenuto{
+     text-align:right;
+     font-size: 1.5em;
+ }
+
+ .button {
+    border-radius: 4px;
+    background-color: deepskyblue;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+    table, th, td{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }

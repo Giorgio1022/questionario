@@ -9,13 +9,8 @@ if(!isset($_SESSION['utente'])){
     <head>
         <title>Creazione del Questionario</title>
         <meta charset = "UTF-8">
+        <link rel="stylesheet" href="stili.css">
         <style>
-            *{
-                box-sizing: border-box;
-                text-align: justify;
-                font-family: verdana;
-                font-size: 12px;
-            }
             #finestra{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -33,28 +28,9 @@ if(!isset($_SESSION['utente'])){
                 grid-column: 2 / 3;
                 grid-row: 1 / 4;
             }
-            
             #daNascondere{
                 display: none;
             }
-            
-            
-            header{
-                display: grid;grid-template-columns: 1fr 4fr 1fr
-            }
-            header  img {
-                height: 5em;
-            }
-            header > :first-child { text-align: left; }
-             header > :nth-child(2) { text-align: center; font-size: 2.5em; }
-             header > :last-child { text-align: right; }
-             
-             #testoHeader{
-                display: grid;
-                align-content: space-evenly;
-             }
-
-            
         </style>
     </head>
     <body>
