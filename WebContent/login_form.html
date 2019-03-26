@@ -3,16 +3,40 @@
     <head>
         <title>Log-In</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" type="text/css" href="stili.css">
+        <style type="text/css">
+            body{
+                background: linear-gradient(to right, red , yellow);
+                text-align: center;
+            }
+            h1{
+                margin-bottom: 1.20em
+            }
+            label{
+                margin-bottom: 1em;
+                font-size: 20px
+            }
+            .butt{
+                padding: 16px 32px;
+                background-color: white; 
+                color: black; 
+                border: 2px solid #008CBA;
+                margin-top: 1em;
+            }
+            .butt:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+        </style>
     </head>
     <body>
     <h1 style="font-size: 80px">Login</h1>
         <form action="login_azione.php" method="post">
-            <label style="font-size: 20px">Username</label>
+            <label>Username</label>
             <br>
-            <input id="txtuser" type="text" name="username">
+            <input type="text" name="username">
             <br>
-            <label style="font-size: 20px">Password</label>
+            <label>Password</label>
             <br>
             <input type="password" name="password">
             <br>

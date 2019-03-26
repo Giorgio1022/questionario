@@ -1,30 +1,41 @@
 <?php
 session_start();
-if(!isset($_SESSION['Livello'])){
+if(!isset($_SESSION['livello'])){
     header('location: index.php');
     exit(0);
 }?>
-        <!DOCTYPE html>
-<html>
-<style>
-html{
-   background: linear-gradient(to bottom right, black, #4000ff,#c4e6d9);
-}
-</style>
+<!DOCTYPE html>
+<html lang="it">
 <head>
     <title>Inserisci Utente</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stili.css">
 </head>
 <body>
+    <header>
+        <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+        <h1>Inserisci utente</h1>
+        <a href="index.php"><img src="immagini/home.png"/></a>
+    </header>
+
     <form action="utente_azione.php" method="post">
-        <a href="index.php"> <img src="logout.png" style="width:110px;height:100px;"> </a>
-        <h1 align=center style="color: red"> Utenti </h1>
-        <p align=center><span style="padding-left:2em"> Nome </span> <span style="padding-left:8em"> Password </span><span style="padding-left: 2em;">Livello</span> </p>
-        <p align=center><input name="Nome" type="text"> <input name="Password" type="password"><select name='Livello'><option value="0">Studente</option><option value="1">Docente</option></select> </p>
-        
-        <br>
-        <p align=center><input value="Aggiungi" type="submit"></p>
-        <br>
+        <table style="margin:auto">
+            <tr>
+                <th>Nome</th><th>Password</th><th>Livello</th>
+            </tr>
+            <tr>
+                <td><input name="Nome" type="text"></td>
+                <td><input name="Password" type="password"></td>
+                <td>
+                    <select name='Livello'>
+                        <option value="0">Studente</option>
+                        <option value="1">Docente</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <p><input value="Aggiungi" type="submit"></p>
         
     </form>
 </body>

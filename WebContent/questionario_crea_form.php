@@ -5,17 +5,12 @@ if(!isset($_SESSION['utente'])){
     exit(0);
 } ?>
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
         <title>Creazione del Questionario</title>
         <meta charset = "UTF-8">
+        <link rel="stylesheet" href="stili.css">
         <style>
-            *{
-                box-sizing: border-box;
-                text-align: justify;
-                font-family: verdana;
-                font-size: 12px;
-            }
             #finestra{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -33,35 +28,16 @@ if(!isset($_SESSION['utente'])){
                 grid-column: 2 / 3;
                 grid-row: 1 / 4;
             }
-            
             #daNascondere{
                 display: none;
             }
-            
-            
-            header{
-                display: grid;grid-template-columns: 1fr 4fr 1fr
-            }
-            header  img {
-                height: 5em;
-            }
-            header > :first-child { text-align: left; }
-             header > :nth-child(2) { text-align: center; font-size: 2.5em; }
-             header > :last-child { text-align: right; }
-             
-             #testoHeader{
-                display: grid;
-                align-content: space-evenly;
-             }
-
-            
         </style>
     </head>
     <body>
         <header>
-            <div><img id="iis" src="logoiis.png"></div>
-            <div id="testoHeader">Creazione Questionario</div>
-            <a  href='index.php' ><img id="esci" src="logout.png"/></a>
+            <img src="immagini/cassatagattapone.png" alt="logo iis Cassata Gattapone">
+            <h1>Creazione Questionario</h1>
+            <a href="index.php"><img src="immagini/home.png"/></a>
         </header>
         <div id = "finestra">     
             <div id = "divDomanda">
