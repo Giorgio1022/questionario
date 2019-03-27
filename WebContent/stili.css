@@ -124,7 +124,7 @@ table.righe tr:nth-child(odd) {
 	background-color: white;
 }
 
-tr:hover td {
+table.righe tr:hover td {
 	background-color: #0099e6;
   color: white;
 }
