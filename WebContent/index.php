@@ -33,7 +33,7 @@
         <table border="0" align="center"> 
             <tr>
                 <th>Crea Questionario</th>
-                <th>Elenco Questionario</th>
+                <th>Cerca Questionario</th>
                 <th>Inserisci Domande</th>
                 <th>Inserisci Materia</th>
 				<th>Aggiungi Utente</th>
