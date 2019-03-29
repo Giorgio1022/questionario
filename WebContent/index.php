@@ -1,9 +1,6 @@
 <?php	
-	session_start();
-    if(!isset($_SESSION['utente'])){
-        header('location: login_form.html');     
-        exit(0);
-	}
+    require "lib/connessione.php";
+    controllaAccesso(3);
 ?>        
 <!DOCTYPE html>
 <html lang="it">
@@ -27,7 +24,7 @@
             <div><a  href='logout.php'><img id="esci" src="immagini/logout.png"/></a></div>
         </header>
     
-<?php  if($_SESSION['livello']==1){ 
+<?php  if($_SESSION['livello']>3){ 
     // ingresso come docente 
 ?>
         <table border="0" align="center"> 
