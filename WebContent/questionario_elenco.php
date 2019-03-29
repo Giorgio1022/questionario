@@ -1,5 +1,6 @@
 <?php
-//$_SESSION[]
+    require "lib/connessione.php";
+    controllaAccesso(3);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,8 @@
             <th>Materia</th>
         </tr>
 <?php
-require "lib/connessione.php";
+
+$conn = connessione();
 
 $query = "SELECT * FROM questionari";
 $ris = mysqli_query($conn, $query);
