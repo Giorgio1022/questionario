@@ -1,3 +1,7 @@
+<?php
+require "lib/connessione.php";
+controllaAccesso(6);
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -18,8 +22,7 @@
 <p align=center> <span style="padding-left:1em"> Materia </span><span style="padding-left:5em"> Domanda </span></p>
 <!-- stabilisco la connessione con il server -->
 <p align=center> <?php
-require "lib/connessione.php";
-
+$conn=connessione();
 //comando sql per la selezione del nome all’interno della tabella materia
 $sql = "SELECT `Nome` FROM `materie`";
 $result = mysqli_query($conn, $sql);

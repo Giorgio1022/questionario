@@ -1,12 +1,10 @@
 <?php
-//stabilisco la connessione con il server
-error_log("P1:".serialize($_POST));
 require "lib/connessione.php";
-
+controllaAccesso(6);
+$conn=connessione();
 //comando sql per l’inserimento dei dati all’interno di domande
 $testoDomanda = mysqli_real_escape_string($conn,$_POST['Domanda']);
 $sql = "INSERT INTO `domande`(`ID_domanda`, `Testo_domanda`, `FK_Materia`) VALUES ('NULL','$testoDomanda','{$_POST['listbox']}')";
-error_log("P2 ".$sql);
 //stampo su video il risultato dell’operazione
 if(mysqli_query($conn, $sql)){
      echo '<script language="javascript">';
