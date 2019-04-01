@@ -1,5 +1,6 @@
 <?php
-session_start();
+require "lib/connessione.php";
+controllaAccesso(3);
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -24,7 +25,7 @@ session_start();
         //stabilisco la connessione con il server
         $ID=$_GET['id'];
         $_SESSION['ID'] = $ID;
-        require "lib/connessione.php";
+        $conn = connessione();
 
         $sql="SELECT * FROM questionari WHERE ID = $ID";
   
