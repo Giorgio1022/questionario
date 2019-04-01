@@ -1,5 +1,8 @@
 <?php
 session_start();
+require "lib/connessione.php";
+controllaAccesso(3);
+$conn=connessione();
 header('Content-type: application/json; charset=UTF-8');
 //creazione delle variabili
 $desc = $_GET['q'];
@@ -8,11 +11,6 @@ $n = 0;
 if(!isset($_SESSION['utenti'])){
 // header('Location: login.html');
 }
-// creo la connessione con il server talos, se (if) la connessione non avviene con successo, 
-// viene visualizzato un messaggio di errore.
-
-require "lib/connessione.php";
-
 //selezione di tutto il contenuto dalla tabelle domande, ove la materia e successivamente la domanda, contengono uno o pi� caratteri da noi passati. Successivamente vengono ordinati in base all� ID_Domanda. 
 $sqlDomande = "
 SELECT * 

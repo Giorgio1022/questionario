@@ -1,5 +1,6 @@
 <?php
-session_start();
+require "lib/connessione.php";
+controllaAccesso(3);;
 ?><!DOCTYPE html>
 <html lang="it">
 <head>
@@ -17,8 +18,8 @@ session_start();
 $ID=$_SESSION['ID'];
 $utente = $_SESSION['utente'];
 // Create connection
-require "lib/connessione.php";
 
+$conn = connessione();
 $data = date('Y-m-d');
 $sql="INSERT INTO svolgimenti(ID, Data, FK_Utente, FK_questionario) VALUES (NULL,'$data','$utente', '$ID')";   
 if (mysqli_query($conn, $sql)) {

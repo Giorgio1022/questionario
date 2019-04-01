@@ -1,9 +1,7 @@
 <?php
-session_start();
-if(!isset($_SESSION['utente'])){
-    header('location: index.php');
-    exit(0);
-} ?>
+require "lib/connessione.php";
+controllaAccesso(3);
+?>
 <!DOCTYPE html>
 <html lang="it">
     <head>
@@ -46,7 +44,7 @@ if(!isset($_SESSION['utente'])){
 
                 <?php
   
-                    require "lib/connessione.php";
+                    $conn = connessione();
                     $sql = "SELECT `Nome` FROM `materie`";
                   
                     $result = mysqli_query($conn, $sql);

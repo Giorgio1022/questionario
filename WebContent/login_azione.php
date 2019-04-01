@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "lib/connessione.php";
+$conn=connessione();
 
 $username = $_POST['username'];
 $password = md5($_POST['password']);

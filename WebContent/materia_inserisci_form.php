@@ -1,3 +1,8 @@
+<?php
+require "lib/connessione.php";
+controllaAccesso(9);
+$conn=connessione();
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
