@@ -13,6 +13,9 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+        p{
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -21,6 +24,24 @@
         <h1>Questionari</h1>
         <a href="index.php"><img src="immagini/home.png"/></a>
     </header>
+<?php
+$conn = connessione();
+
+$sql = "SELECT FK_Materia FROM questionari";
+$result = mysqli_query($conn, $sql);
+echo "<select>";
+while ($r = mysqli_fetch_assoc($result)) {
+echo '<option value="'.$r['FK_Materia'].'">'.$r['FK_Materia'].'</option>'; 
+}
+echo '</select>';
+
+mysqli_close($conn);
+?>
+<p>
+Ricerca : <input type="text" name="casellaRicerca">
+<input type="submit" value="cerca"> 
+</p>
+
     <table class="righe">
         <tr>
             <th>ID</th>
