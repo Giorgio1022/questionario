@@ -1,9 +1,11 @@
 <?xml  version="1.0" encoding="UTF-8" ?>
 <question type="multichoice">
-     <name>
-         <domanda>Testo della domanda:</domanda>
-         <materia>XYZ</materia>
-     </name>
+     <domanda>
+         <name>Testo della domanda:</name>
+     </domanda>
+     <materia>
+        <name>XYZ</name>
+    </materia>
      <questiontext format="html">
      <text>Risposta1</text>
      <shuffleanswers>0/1</shuffleanswers>
