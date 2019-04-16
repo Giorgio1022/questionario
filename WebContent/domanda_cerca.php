@@ -1,5 +1,4 @@
 <?php
-session_start();
 require "lib/connessione.php";
 controllaAccesso(3);
 $conn=connessione();
