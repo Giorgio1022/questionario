@@ -19,17 +19,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 INSERT INTO `utenti` (`Username`, `Password`, `Livello`) VALUES
-('cippo', MD5('password'), '0'),
-('costel', MD5('password'), '0'),
-('edoardo', MD5('password'), '1'),
-('elia', MD5('password'), '0'),
-('emanuele', MD5('password'), '0'),
-('erika', MD5('password'), '0'),
-('gabriele', MD5('password'), '0'),
-('ilaria', MD5('password'), '0'),
-('samuele', MD5('password'), '1'),
-('silvia', MD5('password'), '0'),
-('studente', MD5('password'), '0');
+('cippo', MD5('password'), '3'),
+('costel', MD5('password'), '3'),
+('edoardo', MD5('password'), '6'),
+('elia', MD5('password'), '3'),
+('emanuele', MD5('password'), '3'),
+('erika', MD5('password'), '3'),
+('gabriele', MD5('password'), '3'),
+('ilaria', MD5('password'), '3'),
+('samuele', MD5('password'), '6'),
+('silvia', MD5('password'), '3'),
+('admin', MD5('admin'), '9'),
+('studente', MD5('password'), '3');
 
 INSERT INTO `materie` (`Nome`) VALUES
 ('inglese'),
