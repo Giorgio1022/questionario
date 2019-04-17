@@ -1,0 +1,29 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<quiz>
+<question type="multichoice" id="8">
+     <text>Nel linguaggio SQL, le tre parole chiave "UPDATE", " SET" e "WHERE":</text>
+     <subject>informatica</subject>
+     <answer fraction="1.0" id="30">
+          <text>DES</text>
+     </answer>
+     <answer fraction="0.0" id="29">
+          <text>AES</text>
+     </answer>
+     <answer fraction="0.0" id="32">
+          <text>IDEA</text>
+     </answer> 
+</question>  
+<question type="multichoice" id="2">
+          <text>Cosa fa una VLAN?</text>
+          <subject>sistemi</subject>
+     <answer fraction="1.0" id="5">
+          <text>permette di definire più reti locali virtuali distinte usando un unica rete</text>
+     </answer>
+     <answer fraction="0.0" id="6">
+          <text>crea tante reti virtuali</text>
+     </answer>
+     <answer fraction="0.0" id="7">
+          <text>collega una rete su più reti</text>
+     </answer>
+</question>  
+</quiz>

@@ -1,10 +1,10 @@
 [
     {"domanda":"testo della domanda", "materia":"xyz",
         "risposte":[
-                       {"testo":"risposta1", "valore":0/1},
-		       {"testo":"risposta2", "valore":0/1},
-		       {"testo":"risposta3", "valore":0/1},
-	               {"testo":"risposta4", "valore":0/1}
+                {"testo":"risposta1", "valore":"0/1"},
+		        {"testo":"risposta2", "valore":"0/1"},
+		        {"testo":"risposta3", "valore":"0/1"},
+	            {"testo":"risposta4", "valore":"0/1"}
 		   ]
      }
 ]
