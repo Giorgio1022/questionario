@@ -1,4 +1,5 @@
 <?php
+// stabilisco la connessione con il server chiamando il file connessione.php
 require "lib/connessione.php";
 controllaAccesso(9);
 $conn=connessione();
@@ -9,11 +10,8 @@ $conn=connessione();
 <title>redirect inserimento</title>
 </head>
 <body>
-<script>
 <?php
-//stabilisco la connessione con il server
 require "lib/connessione.php";
-
 //comando sql per l’inserimento dei dati all’interno della tabella materia
 $sql = "INSERT INTO `materie`(`Nome`) VALUES ('{$_POST['materia']}')";
 
@@ -29,7 +27,6 @@ if(mysqli_query($conn, $sql)){
 //chiudo la connessione
 mysqli_close($conn);
 ?>
-</script>
 </body>
 </html>
 
