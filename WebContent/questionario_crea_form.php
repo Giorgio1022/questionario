@@ -61,7 +61,8 @@ controllaAccesso(3);
                 ?>
 
     </p>
-                <p>Domanda: <input type = "text" name = "q" id = "testoD"></p>    
+                <p>Domanda: <input type = "text" name = "q" id = "testoD"></p>   
+                 <!-- TextField apposita dove si inserisce la parola chiave da cercare-->
                 <input type = "button" onclick = "cercaDomanda()" value = "cerca">
                 <!-- L'input cerca una volta fornita una parola chiave della domanda nell'apposita textfield
                 effettua una ricerca e fornisce tutte le domande che contengono la parola chiave-->
