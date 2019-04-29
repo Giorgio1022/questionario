@@ -1,4 +1,5 @@
 ﻿<?php
+// stabilisco la connessione con il server chiamando il file connessione.php
 require "lib/connessione.php";
 controllaAccesso(9);
 $conn=connessione();

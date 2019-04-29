@@ -43,7 +43,8 @@ controllaAccesso(3);
                 <p>Materia:
 
                 <?php
-  
+                    /* nel php si estraggono dal server le materie 
+                    e vengono messe all'interno del menu a tendina (combobox)*/
                     $conn = connessione();
                     $sql = "SELECT `Nome` FROM `materie`";
                   
@@ -62,6 +63,8 @@ controllaAccesso(3);
     </p>
                 <p>Domanda: <input type = "text" name = "q" id = "testoD"></p>    
                 <input type = "button" onclick = "cercaDomanda()" value = "cerca">
+                <!-- L'input cerca una volta fornita una parola chiave della domanda nell'apposita textfield
+                effettua una ricerca e fornisce tutte le domande che contengono la parola chiave-->
                 <div id = "domanda"></div>
             </div>
             <br>
