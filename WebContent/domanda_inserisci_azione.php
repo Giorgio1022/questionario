@@ -1,4 +1,5 @@
 <?php
+//controlla l'accesso richiamando la pagina "connessione.php", i diritti del utente che si connette (6)
 require "lib/connessione.php";
 controllaAccesso(6);
 $conn=connessione();
