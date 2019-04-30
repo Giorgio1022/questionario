@@ -66,7 +66,6 @@ if($materia!=""){
     $query = "SELECT DISTINCT * FROM questionari WHERE FK_Materia='$materia'";
 }else{
     //tramite una query seleziono tutti i campi distinti  della tabella questionari
-    .
     $query = "SELECT DISTINCT * FROM questionari";
 }
 $ris = mysqli_query($conn, $query);
