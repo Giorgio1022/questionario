@@ -51,7 +51,7 @@
                 <th>Svolgi Questionario<br><input type="text" width="1em" id="ID" placeholder="Inserisci l'ID del questionario"></th>
             </tr>
             <tr>
-                <td><img onclick="esegui();" src="questionario.jpg" style="width:100px;height:100px;"></td>
+                <td><img onclick="esegui();" src="immagini/questionario.png" style="width:100px;height:100px;"></td>
             </tr>          
         </table>
           
