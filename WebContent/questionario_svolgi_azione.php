@@ -1,8 +1,4 @@
 ﻿<?php
-require "lib/connessione.php";
-controllaAccesso(3);
-?>
-<?php
 /* require è un metodo per connettersi alla libreria, viene controllato 
 anche l'accesso:solo l'utente con il livello adeguato può accedere*/
 require "lib/connessione.php";
