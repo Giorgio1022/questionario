@@ -36,10 +36,10 @@
 				<th>Aggiungi Utente</th>
             </tr>
             <tr>
-                <td> <a href="questionario_crea_form.php"> <img src="immagini/questionario.jpg" style="height:100px;"> </a></td>
+                <td> <a href="questionario_crea_form.php"> <img src="immagini/questionario.png" style="height:100px;"> </a></td>
                 <td> <a href="questionario_elenco.php"> <img src="immagini/elenco.png" style="height:100px;"> </a></td>
                 <td> <a href="domanda_inserisci_form.php"> <img src="immagini/domande.png" style="height:110px;"> </a></td>
-                <td> <a href="materia_inserisci_form.php"> <img src="immagini/materia.jpg" style="height:100px;"> </a></td>
+                <td> <a href="materia_inserisci_form.php"> <img src="immagini/materia.png" style="height:100px;"> </a></td>
                 <td> <a href="utente_form.php"> <img src="immagini/utente.png" style="height:100px;"> </a></td>
             </tr>          
         </table>
