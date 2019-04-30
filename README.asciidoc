@@ -15,3 +15,10 @@ Se si usa il client grafico di GitHub e bisogna passare per un proxy: dalla line
 
 == diagramma
 doc/diagramma_pagine.svg è stato disegnato con {url-inkscape}[Inkscape]
+
+
+== Configurazione data USBWebServer
+per configurare la data bisogna andare nella cartella di impostazioni di USBWebServer "SviluppoWeb\settings",
+aprire il file php.ini e cercare il parametro "date.timezone", se esiste, probabilmente è messo come commento,
+rimuovere un eventuale ";" davanti il comando e impostare il timezone "Europe/Rome",
+se tutto ciò non è presente, basta scrivere "date.timezone = Europe/..."
