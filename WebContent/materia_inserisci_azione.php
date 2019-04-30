@@ -1,4 +1,5 @@
-<?php
+﻿<?php
+// stabilisco la connessione con il server chiamando il file connessione.php
 require "lib/connessione.php";
 controllaAccesso(9);
 $conn=connessione();
@@ -11,11 +12,9 @@ $conn=connessione();
 <body>
 <script>
 <?php
-//stabilisco la connessione con il server
-require "lib/connessione.php";
 
 //comando sql per l’inserimento dei dati all’interno della tabella materia
-$sql = "INSERT INTO `materie`(`Nome`) VALUES ('{$_POST['materia']}')";
+$sql = "INSERT INTO materie (Nome) VALUES ('{$_POST['materia']}')";
 
 //stampo su video il risultato dell’operazione
 if(mysqli_query($conn, $sql)){
