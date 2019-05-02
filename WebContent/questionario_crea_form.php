@@ -84,7 +84,6 @@ controllaAccesso(3);
             //Stato Cambiato
             function statoCambiato(){
                 var riga = "";
-                var j;   
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {
                     var nRisp = 0;
                     oggetto = JSON.parse(httpRequest.responseText);
@@ -96,7 +95,7 @@ controllaAccesso(3);
                             "<td><input type = checkbox id = 'domanda" + id +"' value ="+ id +" onclick = 'aggiungiDomanda("+ id +")'></td>" + 
                             "<td><p id = " + id +">" + oggetto[i].Domanda + "</p><td>" +
                             "</tr>";
-                        for(j = 0; j < oggetto[i].Risposte.length; j++){
+                        for(var j = 0; j < oggetto[i].Risposte.length; j++){
                             risposte[nRisp] = new Array(2);
                             risposte[nRisp][0] = oggetto[i].Risposte[j].Risposta;
                             risposte[nRisp][1] = oggetto[i].Posizione_domanda;
