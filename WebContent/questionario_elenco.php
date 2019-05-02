@@ -1,4 +1,5 @@
 <?php
+// richiama file connessione.php nel quale crea la connessione
     require "lib/connessione.php";
     controllaAccesso(3);
 ?>
@@ -13,7 +14,11 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-    </style>
+        p{
+            color: white;
+            font-weight: bold;
+        }
+    </style> 
 </head>
 <body>
     <header>
@@ -21,19 +26,56 @@
         <h1>Questionari</h1>
         <a href="index.php"><img src="immagini/home.png"/></a>
     </header>
-    <table class="righe">
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Materia</th>
-        </tr>
+
+    <form action="questionario_elenco.php" method="GET">
+    <p>
+    Ricerca Questionari:
 <?php
 
 $conn = connessione();
+//seleziona le materie disinte all'interno di questionari  
 
-$query = "SELECT * FROM questionari";
+$sql = "SELECT DISTINCT FK_Materia FROM questionari";
+
+$result = mysqli_query($conn, $sql);
+//stampa la lista delle materie 
+echo '<input list="materie" name="materia">';
+echo '<datalist id="materie">';
+while ($r = mysqli_fetch_assoc($result)) {
+echo '<option value="'.$r['FK_Materia'].'">'.$r['FK_Materia'].'</option>'; 
+}
+echo '</datalist>';
+
+mysqli_close($conn);
+?>
+
+<input type="submit" value="cerca"> 
+</form>
+</p>
+
+<?php
+// prende materia con il metodo GET 
+
+if(isset($_GET['materia'])){  
+$conn = connessione();
+//crea la variabile $materia nel quale viene messa la  materia tramite il metodo get 
+$materia = $_GET['materia'];
+//controlla se la variabile $materia è vuota
+if($materia!=""){
+ // tramite una query seleziono tutti i campi distinti della tabella questionari tramite la materia contenuta nella variabile $materia
+    $query = "SELECT DISTINCT * FROM questionari WHERE FK_Materia='$materia'";
+}else{
+    //tramite una query seleziono tutti i campi distinti  della tabella questionari
+    $query = "SELECT DISTINCT * FROM questionari";
+}
 $ris = mysqli_query($conn, $query);
-
+//si crea  una tabella come risultato in cui si inserisce il nome e le materie 
+echo '<table class="righe">';
+echo '<tr>';
+echo    '<th>ID</th>';
+echo    '<th>Nome</th>';
+echo    '<th>Materia</th>';
+echo '</tr>';
 while ($row = mysqli_fetch_assoc($ris)) {
     echo "<tr>";
     echo "<td>" . $row["ID"] . "</td>";
@@ -42,7 +84,7 @@ while ($row = mysqli_fetch_assoc($ris)) {
     echo "</tr>\n";
 }
 mysqli_close($conn);
-
+}
 
 ?>
    </table>

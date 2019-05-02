@@ -67,7 +67,7 @@ CREATE TABLE `svolgimenti` (
 CREATE TABLE `utenti` (
   `Username` char(30) NOT NULL,
   `Password` char(40) NOT NULL,
-  `Livello` enum('0','1') NOT NULL
+  `Livello` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `domande`
