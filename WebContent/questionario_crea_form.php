@@ -107,7 +107,10 @@ controllaAccesso(3);
                         }
                     }
                     riga = riga + "</table>"; 
-                    document.getElementById("domanda").innerHTML = riga;
+                    document.getElementById("domanda").innerHTML = riga;          
+                    if(nRisp==0){
+                    document.getElementById("domanda").innerHTML = "Nessuna domanda trovata!";
+                    }
                     nRisp = 0;
                  }
             }
@@ -158,7 +161,6 @@ controllaAccesso(3);
                 for(var i = 0; i < domande.length; i++){
                     testoDomanda = testoDomanda + domande[i] + "<br>";
                 }
-                
                 document.getElementById("visualizza").innerHTML = testoDomanda;
             }
             
