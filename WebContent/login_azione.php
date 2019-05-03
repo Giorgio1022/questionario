@@ -3,13 +3,7 @@ session_start(); //apro una sessione
 require "lib/connessione.php";//recupero dai
 $conn=connessione(); //connette
 $username = $_POST['username']; //creo una variabile post
-
-
-
-
-
 $password = md5($_POST['password']); // creo variabile con cifratura
-
 $sql="SELECT Username, Password, Livello FROM utenti WHERE username = '$username' AND Password = '$password';";// testo quey
 $risultato = mysqli_query($conn, $sql);//creo query
 if(mysqli_num_rows($risultato)>0){ //Ottiene il numero di righe in un risultato

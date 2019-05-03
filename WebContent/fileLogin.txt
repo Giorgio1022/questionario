@@ -1,6 +1,0 @@
-::1;03/05/2019 alle 07:21:27;edoardo
-::1;03/05/2019 alle 07:21:49;edoardo
-::1;03/05/2019 alle 07:22:30;edoardo
-::1;03/05/2019 alle 07:26:46;edoardo;NON RIUSCITO
-::1;03/05/2019 alle 07:26:53;edoardo;RIUSCITO
-::1;03/05/2019 alle 07:27:06;edoardo;NON RIUSCITO
