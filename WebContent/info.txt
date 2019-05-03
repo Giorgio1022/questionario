@@ -1,0 +1,9 @@
+username: admin // data: 2019-05-03 09:21:53 // ip: ::1 // stato: Accesso accettato 
+username: edoardo // data: 2019-05-03 09:22:05 // ip: ::1 // stato: Accesso accettato 
+username: edoardo // data: 2019-05-03 09:22:11 // ip: ::1 // stato: Accesso negato 
+username: samuele // data: 2019-05-03 09:22:18 // ip: ::1 // stato: Accesso accettato 
+username: samuele // data: 2019-05-03 09:22:23 // ip: ::1 // stato: Accesso negato 
+username: ilaria // data: 2019-05-03 09:22:33 // ip: ::1 // stato: Accesso accettato 
+username: cillo // data: 2019-05-03 09:22:40 // ip: ::1 // stato: Accesso negato 
+username: cillo // data: 2019-05-03 09:22:45 // ip: ::1 // stato: Accesso negato 
+username: nanni // data: 2019-05-03 09:22:51 // ip: ::1 // stato: Accesso negato 
