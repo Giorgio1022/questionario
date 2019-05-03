@@ -1,20 +1,36 @@
-<?php //apro il php
-session_start(); //apro una sessione
-require "lib/connessione.php";//recupero dai
-$conn=connessione(); //connette
+<?php
+session_start();
+require "lib/connessione.php";
+$conn=connessione();
 
-$username = $_POST['username']; //creo una variabile post
-$password = md5($_POST['password']); // creo variabile con cifratura
-$sql="SELECT Username, Password, Livello FROM utenti WHERE username = '$username' AND Password = '$password';";// testo quey
-$risultato = mysqli_query($conn, $sql);//creo query
-if(mysqli_num_rows($risultato)>0){ //Ottiene il numero di righe in un risultato
-    $riga = mysqli_fetch_assoc($risultato);//Recupera una riga del risultato 
-    $_SESSION['utente'] = $riga['Username'];//salvo nelle vcariabili di sessione username e password
+$username = $_POST['username'];
+$password = md5($_POST['password']);
+$sql="SELECT Username, Password, Livello FROM utenti WHERE username = '$username' AND Password = '$password';";
+$risultato = mysqli_query($conn, $sql);
+if(mysqli_num_rows($risultato)>0){
+    $riga = mysqli_fetch_assoc($risultato);
+    $_SESSION['utente'] = $riga['Username'];
     $_SESSION['livello'] = $riga['Livello'];
-    header('location: index.php');//ritorna index.php
+    
+    $ip = $_SERVER [ 'REMOTE_ADDR'];
+    
+ini_set( 'date.timezone', 'Europe/Rome' );
+$fp = fopen("pagina.txt","a-");
+fwrite($fp,"ok");
+fwrite($fp, " ");
+fwrite($fp, $ip);
+fwrite($fp, " ");
+fwrite($fp, $username);
+fwrite($fp, " ");
+fwrite($fp, date('d M Y'));
+fwrite($fp, " ");
+fwrite($fp, date("H:i:s"));
+fwrite($fp, "\r\n");
+fclose($fp);
+
 }else{
-    header('location: login_form.html');//torna al form di login perche utente sconosciuto
+    header('location: login_form.html');
 }
 //chiudo la connessione
 mysqli_close($conn);
-?> <!--chiudo php>
+?>
